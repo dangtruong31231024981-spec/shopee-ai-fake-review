@@ -13,12 +13,12 @@ Hệ thống sử dụng **học máy (ML) và xử lý ngôn ngữ tự nhiên 
 
 ## Nội dung kho lưu trữ
 - **Tiền xử lý dữ liệu:** Làm sạch, chuẩn hóa, tokenization, trích xuất đặc trưng từ review.  
-- **Mô hình AI:** SVM, Random Forest, XGBoost, TextCNN, BiLSTM, Transformer (PhoBERT).  
+- **Mô hình AI:**  Random Forest, 
 - **Huấn luyện & đánh giá:** Train/validation/test split, đo lường Accuracy, Precision, Recall, F1-score.  
 - **Triển khai:** API, microservice, tích hợp với dashboard nội bộ hiển thị kết quả phân loại và cảnh báo.
 
 ## Công nghệ & công cụ
-- **Ngôn ngữ:** Python  
+- **Công cụ:** Organe  
 - **Thư viện ML/NLP:** scikit-learn, PyTorch, TensorFlow, Hugging Face Transformers  
 - **Triển khai:** Docker, FastAPI, AWS/Azure (tuỳ chọn)  
 
