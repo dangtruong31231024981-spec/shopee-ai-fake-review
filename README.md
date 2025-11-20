@@ -54,3 +54,33 @@ Hệ thống sử dụng **Machine Learning (ML)** và **Xử lý ngôn ngữ t�
   - Tăng tỷ lệ chuyển đổi ~12%  
   - Giảm chi phí kiểm duyệt 30–50%
 
+## 📦 Nguồn dữ liệu
+
+Dự án sử dụng bộ dữ liệu **ViSpamReviews** cho nhiệm vụ phát hiện đánh giá spam trên các sàn thương mại điện tử Việt Nam.  
+Dataset được xây dựng và công bố cho mục đích nghiên cứu, với quy trình gán nhãn nghiêm ngặt để phân loại:
+
+- **Nhiệm vụ nhị phân:** Phân loại review thành **spam** hoặc **không spam**.  
+- **Nhiệm vụ đa lớp:** Xác định loại spam (spam nhẹ, spam quảng cáo mạnh, v.v.).
+
+### 📂 Các baseline đi kèm dataset
+- **Deep Neural Models (DNN):** TextCNN, BiLSTM, GRU  
+- **Transformers:** PhoBERT, BERT4News  
+- **Sentence-BERT:** embedding cho mô tả sản phẩm  
+
+### 🔗 Nguồn tham khảo
+- Kaggle Inference: [ViSpamReviews Inference](https://www.kaggle.com/cinhvn/pt-vispamreviews-inference)  
+- Publication (Version 1): [https://arxiv.org/abs/2207.14636](https://arxiv.org/abs/2207.14636)  
+- Publication (Version 2 – Metadata Integration): [https://arxiv.org/abs/2405.13292](https://arxiv.org/abs/2405.13292)  
+
+### 📖 Trích dẫn
+@InProceedings{10.1007/978-3-031-21743-2_48,
+  author    = {Van Dinh, Co and Luu, Son T. and Nguyen, Anh Gia-Tuan},
+  editor    = {Nguyen, Ngoc Thanh and Tran, Tien Khoa and Tukayev, Ualsher and Hong, Tzung-Pei and Trawi{\'{n}}ski, Bogdan and Szczerbicki, Edward},
+  title     = {Detecting Spam Reviews on Vietnamese E-Commerce Websites},
+  booktitle = {Intelligent Information and Database Systems},
+  year      = {2022},
+  publisher = {Springer International Publishing},
+  address   = {Cham},
+  pages     = {595--607},
+  isbn      = {978-3-031-21743-2}
+}
