@@ -11,11 +11,12 @@ Hệ thống sử dụng **Machine Learning (ML)** và **Xử lý ngôn ngữ t�
 
 
 ## 👥 Thành viên nhóm
-- **Trương Văn A** – Trưởng nhóm, quản lý dự án  
-- **Nguyễn Thị B** – Backend & MLOps  
-- **Lê Văn C** – Frontend & UI/UX  
-- **Phạm Thị D** – Data Engineer & Tester  
-
+- **Trương Kim Đăng** – Project Manager (PM)
+- **Huỳnh Hoàng Hải Yến** – Business Analyst (BA)
+- **Nguyễn Thị Thanh Thảo** – Data Engineer (DE)
+- **Nguyễn Hương Thủy** – Data Analyst (DA) 
+- **Trần Thúy Hồng** – ML Engineer (MLE)
+- **Lã Nguyễn Yến Nhi** – Communication & Design Lead (CDL)
 
 ## 🎯 Mục tiêu
 - **Tăng độ tin cậy của đánh giá** → giúp người mua đưa ra quyết định chính xác.  
@@ -26,13 +27,14 @@ Hệ thống sử dụng **Machine Learning (ML)** và **Xử lý ngôn ngữ t�
 
 ## 📂 Nội dung kho lưu trữ
 - **Tiền xử lý dữ liệu:** Làm sạch, chuẩn hóa, tokenization, trích xuất đặc trưng (VnCoreNLP, TF-IDF, BoW).  
-- **Mô hình AI:** Random Forest (chính), Logistic Regression, Naive Bayes.  
-- **Huấn luyện & đánh giá:** Train/validation/test split, đo lường Accuracy, Precision, Recall, F1-score, AUC.  
-- **Triển khai:** API (FastAPI/Flask), Docker, tích hợp dashboard hiển thị kết quả phân loại và cảnh báo.
+- **Mô hình AI:** Random Forest (chính), Logistic Regression
+- **Huấn luyện & đánh giá:** Train/validation/test split, đo lường Accuracy, Precision, Recall, F1-score, AUC  
+- **Triển khai:** API (FastAPI/Flask), Docker, tích hợp dashboard hiển thị kết quả phân loại và cảnh báo
 
 
 ## 🛠️ Công nghệ & công cụ
-- **Ngôn ngữ:** Python  
+- **Công cụ:** Orange, Power BI
+- **Ngôn ngữ:** Python
 - **Thư viện ML/NLP:** scikit-learn, PyTorch, TensorFlow, Hugging Face Transformers  
 - **Tiền xử lý:** VnCoreNLP, TF-IDF, Bag of Words  
 - **Triển khai:** Docker, FastAPI, AWS/Azure (tuỳ chọn)  
@@ -73,6 +75,7 @@ Dataset được xây dựng và công bố cho mục đích nghiên cứu, vớ
 - Publication (Version 2 – Metadata Integration): [https://arxiv.org/abs/2405.13292](https://arxiv.org/abs/2405.13292)  
 
 ### 📖 Trích dẫn
+```python
 @InProceedings{10.1007/978-3-031-21743-2_48,
   author    = {Van Dinh, Co and Luu, Son T. and Nguyen, Anh Gia-Tuan},
   editor    = {Nguyen, Ngoc Thanh and Tran, Tien Khoa and Tukayev, Ualsher and Hong, Tzung-Pei and Trawi{\'{n}}ski, Bogdan and Szczerbicki, Edward},
@@ -84,3 +87,4 @@ Dataset được xây dựng và công bố cho mục đích nghiên cứu, vớ
   pages     = {595--607},
   isbn      = {978-3-031-21743-2}
 }
+```
