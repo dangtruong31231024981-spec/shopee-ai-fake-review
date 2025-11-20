@@ -1,4 +1,4 @@
-# 🤖 Shopee Fake Review Detection AI
+#  Hệ thống AI đánh giá độ tin cậy của đánh giá người dùng của Shoppe
 
 ## 📌 Tổng quan
 Dự án **Shopee Fake Review Detection AI** được phát triển nhằm **phát hiện và phân loại các đánh giá giả trên Shopee**.  
