@@ -1,75 +1,86 @@
-#  Hệ thống AI đánh giá độ tin cậy của đánh giá người dùng của Shoppe
+#  HỆ THỐNG AI PHÁT HIỆN ĐÁNH GIÁ GIẢ (FAKE REVIEW DETECTION)
 
-## 📌 Tổng quan
-Dự án **Shopee Fake Review Detection AI** được phát triển nhằm **phát hiện và phân loại các đánh giá giả trên Shopee**.  
-Các đánh giá giả do bot hoặc tài khoản gian lận tạo ra có thể:
-- Làm **nhầm lẫn người mua**
-- Ảnh hưởng đến **người bán chân chính**
-- Giảm **uy tín nền tảng thương mại điện tử**
-
-Hệ thống sử dụng **Machine Learning (ML)** và **Xử lý ngôn ngữ tự nhiên (NLP)** để phân tích **văn bản review và metadata**, đánh giá mức độ tin cậy **gần như theo thời gian thực**.
-
-
-## 👥 Thành viên nhóm
-- **Trương Kim Đăng** – Project Manager (PM)
-- **Huỳnh Hoàng Hải Yến** – Business Analyst (BA)
-- **Nguyễn Thị Thanh Thảo** – Data Engineer (DE)
-- **Nguyễn Hương Thủy** – Data Analyst (DA) 
-- **Trần Thúy Hồng** – ML Engineer (MLE)
-- **Lã Nguyễn Yến Nhi** – Communication & Design Lead (CDL)
-
-## 🎯 Mục tiêu
-- **Tăng độ tin cậy của đánh giá** → giúp người mua đưa ra quyết định chính xác.  
-- **Bảo vệ người bán chân chính** → ngăn chặn cạnh tranh không lành mạnh từ review giả.  
-- **Nâng cao hiệu quả vận hành** → giảm khối lượng kiểm duyệt thủ công.  
-- **Hỗ trợ tăng trưởng kinh doanh** → cải thiện tỷ lệ chuyển đổi và doanh thu.
-
-
-## 📂 Nội dung kho lưu trữ
-- **Tiền xử lý dữ liệu:** Làm sạch, chuẩn hóa, tokenization, trích xuất đặc trưng (VnCoreNLP, TF-IDF, BoW).  
-- **Mô hình AI:** Random Forest (chính), Logistic Regression
-- **Huấn luyện & đánh giá:** Train/validation/test split, đo lường Accuracy, Precision, Recall, F1-score, AUC  
-- **Triển khai:** API (FastAPI/Flask), Docker, tích hợp dashboard hiển thị kết quả phân loại và cảnh báo
-
-
-## 🛠️ Công nghệ & công cụ
-- **Công cụ:** Orange, Power BI
-- **Ngôn ngữ:** Python
-- **Thư viện ML/NLP:** scikit-learn, PyTorch, TensorFlow, Hugging Face Transformers  
-- **Tiền xử lý:** VnCoreNLP, TF-IDF, Bag of Words  
-- **Triển khai:** Docker, FastAPI, AWS/Azure (tuỳ chọn)  
+##  Giới thiệu dự án
+Dự án xây dựng hệ thống AI/Machine Learning giúp phát hiện đánh giá giả (spam review) trên nền tảng thương mại điện tử.  
+Hệ thống gồm: tiền xử lý dữ liệu, khám phá dữ liệu (EDA), huấn luyện mô hình, đánh giá hiệu năng và thiết kế workflow chạy trên Orange.
 
 
 
-## 📦 Nguồn dữ liệu
+##  Thành viên nhóm
 
-Dự án sử dụng bộ dữ liệu **ViSpamReviews** cho nhiệm vụ phát hiện đánh giá spam trên các sàn thương mại điện tử Việt Nam.  
-Dataset được xây dựng và công bố cho mục đích nghiên cứu, với quy trình gán nhãn nghiêm ngặt để phân loại:
+| Họ & Tên | Vai trò |
+|---------|---------|
+| **Trương Kim Đăng** | Project Manager (PM) |
+| **Huỳnh Hoàng Hải Yến** | Business Analyst (BA) |
+| **Nguyễn Thị Thanh Thảo** | Data Engineer (DE) |
+| **Nguyễn Hương Thủy** | Data Analyst (DA) |
+| **Trần Thúy Hồng** | ML Engineer (MLE) |
+| **Lã Nguyễn Yến Nhi** | Communication & Design Lead (CDL) |
 
-- **Nhiệm vụ nhị phân:** Phân loại review thành **spam** hoặc **không spam**.  
-- **Nhiệm vụ đa lớp:** Xác định loại spam (spam nhẹ, spam quảng cáo mạnh, v.v.).
 
-### 📂 Các baseline đi kèm dataset
-- **Deep Neural Models (DNN):** TextCNN, BiLSTM, GRU  
-- **Transformers:** PhoBERT, BERT4News  
-- **Sentence-BERT:** embedding cho mô tả sản phẩm  
+## 📂 Cấu trúc file trong repository
 
-### 🔗 Nguồn tham khảo
-- Kaggle Inference: [ViSpamReviews Inference](https://www.kaggle.com/cinhvn/pt-vispamreviews-inference)  
-- Publication (Version 1): [https://arxiv.org/abs/2207.14636](https://arxiv.org/abs/2207.14636)  
-- Publication (Version 2 – Metadata Integration): [https://arxiv.org/abs/2405.13292](https://arxiv.org/abs/2405.13292)  
-
-### 📖 Trích dẫn
-```python
-@InProceedings{10.1007/978-3-031-21743-2_48,
-  author    = {Van Dinh, Co and Luu, Son T. and Nguyen, Anh Gia-Tuan},
-  editor    = {Nguyen, Ngoc Thanh and Tran, Tien Khoa and Tukayev, Ualsher and Hong, Tzung-Pei and Trawi{\'{n}}ski, Bogdan and Szczerbicki, Edward},
-  title     = {Detecting Spam Reviews on Vietnamese E-Commerce Websites},
-  booktitle = {Intelligent Information and Database Systems},
-  year      = {2022},
-  publisher = {Springer International Publishing},
-  address   = {Cham},
-  pages     = {595--607},
-  isbn      = {978-3-031-21743-2}
-}
 ```
+Shopee- AI-Fake-Review/
+│
+├── README.md                         # File mô tả dự án
+│
+├── Data gop.xlsx                     # File dữ liệu đã gộp và làm sạch
+├── metadata.csv                      # Metadata mô tả các trường dữ liệu
+├── train.xlsx                        # Dataset training
+├── test.csv                          # Dataset test
+├── data (2).tgz                      # File nén toàn bộ dataset gốc
+│
+├── aiprojec final.ows                # File Orange: pipeline mô hình AI chạy toàn bộ
+│                                     
+│
+├── dashboard/
+│   ├── review_dashboard.pbix         # Dashboard Power BI thể hiện kết quả mô hình
+│   └── dashbord.png                      # Ảnh, icons dùng cho dashboard 
+│
+│
+│
+├── ai_canvas.png                     # File AI Canvas mô tả toàn bộ dự án
+│
+├── report/
+│   ├── bao_cao_lan_1.pdf             # Báo cáo tiến độ lần 1
+│   ├── bao_cao_lan_2.pdf             # Báo cáo tiến độ lần 2
+│   ├── final_report.pdf              # Báo cáo cuối kỳ hoàn chỉnh
+│   ├── slides.pdf                       # Slide thuyết trình cuối kỳ
+│                       
+└── product/
+    ├── bouncher_demo.png                # Files dùng trình bày sản phẩm demo
+
+```
+
+
+## Công nghệ sử dụng
+- Orange Data Mining    
+- Pandas, NumPy  
+- Scikit-learn  
+- TF–IDF Vectorizer  
+- Logistic Regression, Random Forest  
+
+
+
+## 🌐 Truyền thông nội bộ
+https://www.notion.so/Project-AI-Nh-m-7-1ec94327b80e8044b030e4fa1ed28639?source=copy_link
+
+
+## 📁 Repository dự án
+https://github.com/dangtruong31231024981-spec/shopee-ai-fake-review
+
+
+## 📊 Nội dung chính của đồ án
+- Làm sạch dữ liệu văn bản tiếng Việt  
+- Vector hóa bằng TF–IDF  
+- Huấn luyện & so sánh mô hình LR và RF  
+- Đánh giá mô hình bằng Precision, Recall, F1, AUC  
+- Đề xuất dashboard hiển thị kết quả mô hình  
+- Phân tích rủi ro dự án và đề xuất hướng phát triển
+
+
+## 📝 Ghi chú
+- Repo được tổ chức đầy đủ để tái lập quy trình mô hình  
+- Dữ liệu được giữ nguyên từ bước thô đến bước xử lý  
+- Tất cả file báo cáo, slide và mô hình được lưu theo thư mục riêng
