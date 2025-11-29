@@ -41,21 +41,6 @@ Hệ thống sử dụng **Machine Learning (ML)** và **Xử lý ngôn ngữ t�
 
 
 
-## 📊 Kết quả chính
-- **Random Forest** đạt:  
-  - Accuracy: **97.6%**  
-  - Precision: **97.7%**  
-  - Recall: **97.6%**  
-  - AUC: **0.999**  
-- **Kết quả kinh doanh:**  
-  - ROI: **175% trong 3 năm**  
-  - NPV: **+7.12 tỷ VND**  
-  - IRR: **~82%**  
-- **Tác động:**  
-  - Giảm phản hồi tiêu cực ~35%  
-  - Tăng tỷ lệ chuyển đổi ~12%  
-  - Giảm chi phí kiểm duyệt 30–50%
-
 ## 📦 Nguồn dữ liệu
 
 Dự án sử dụng bộ dữ liệu **ViSpamReviews** cho nhiệm vụ phát hiện đánh giá spam trên các sàn thương mại điện tử Việt Nam.  
